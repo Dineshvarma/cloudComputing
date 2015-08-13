@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+	int number;
+	printf("Enter no. of elements:");
+	scanf("%d",&number);
+	int array[number];
+	printf("ENter the numbers:");
+	int i,j,temp;
+	for(i=0;i<number;i++){
+		scanf("%d",&array[i]);
+	}
+	for(i=0;i<number-1;i++){
+		for(j=i+1;j<number;j++){
+			if(array[i]>array[j]){
+				temp=array[i];
+				array[i]=array[j];
+				array[j]=temp;
+			}
+		}
+	}
+	printf("The 3rd least number from array is %d.",array[2]);
+}
